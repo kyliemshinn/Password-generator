@@ -62,6 +62,7 @@ function issuePrompts(){
   confirmUppercase();
   confirmNumerics();
   confirmSpecialCharacters();
+  valideateUserChoice();
 }
 
 //prompted for the length
@@ -70,10 +71,11 @@ function characterLengthPrompt(){
   // userInput = parseInt(prompt("Generate a password! Please choose between 8 and 128 characters."));
   userInput = (prompt("Generate a password! Please choose between 8 and 128 characters."));
   if (!userInput) {
-    alert("Please select a number between 8 and 128")
-  } else if (userInput > 8 || userInput < 128) {
-    alert("Please select a number between 8 and 128")
-  } else issuePrompts();
+    alert("Please select a number between 8 and 128");//when the user does not input a value
+    return userInput; 
+  } //else if (userInput > 8 && userInput < 128) { //when the value is withinthe 8-128 range
+    //continuee????
+  } 
 }
 
 
@@ -99,17 +101,17 @@ function confirmSpecialCharacters() {
 //make sure that at least one character type should be selected
 function valideateUserChoice(){
   if (!conLowercase && !conUppercase && !conNumerics & !conSpecialCharacters) { 
-     generate = alert("You need to choose at least one from the list.");
+       generate = alert("You need to choose at least one from the list.");  //If the user does not choose any of the criteria
   } 
-}
- issuePrompts();
+  //if the user chooses 3 types of criteria
+} else if (conLowercase && conUppercase && conNumerics & ) {
+        generate = upperCaseCharacters.concat(lowerCaseCharacters, numbers)
+}  else if 
+ 
 
 
-  //If the user does not choose any of the criteria
 
 
-
-//if the user chooses 3 types of criteria
 
 //if the user chooses 2 types of critera
 
@@ -122,7 +124,7 @@ var index = Math.floor(Math.random() * options.length);
 
 
 
-
+charAt(index)//for math portion help to generate random
 
 
 
