@@ -1,5 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
+var passwordMinLength = 8;
+var  passwordMaxLength = 28;
 
 // Write password to the #password input
 function writePassword() {
