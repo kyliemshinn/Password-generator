@@ -112,6 +112,21 @@ function generatePassword() {
     guarantee.push(randomSelection(lowerCaseCharacters));
   }
 
+  if (options.conNumerics) {
+    filler = filler.concat(numbers);
+    guarantee.push(randomSelection(numbers));
+  }
+
+  if (options.conSpecialCharacters) {
+    filler = filler.concat(specialCharacter);
+    guarantee.push(randomSelection(specialCharacter));
+  }
+
+  if (options.conUppercase) {
+    filler = filler.concat(upperCaseCharacters);
+    guarantee.push(randomSelection(upperCaseCharacters));
+  }
+  
 
   for (var i = 0; i < options.userInput; i++) {
     var fillResult = randomSelection(filler); //going to be run through line 91-97 first
@@ -130,15 +145,14 @@ function generatePassword() {
 //prompted for the length
 //at least 8 characters and no more than 128 characters???
 function characterLengthPrompt() {
-  // userInput = parseInt(prompt("Generate a password! Please choose between 8 and 128 characters."));
+  
   userInput = parseInt(
-    prompt("Generate a password! Please choose between 8 and 128 characters.")
-  ); //turning string into number
+    prompt("Generate a password! Please choose between 8 and 128 characters.")//turning string into number since string are not represented in numerics
+  ); 
   if (!userInput) {
     alert("Please select a number between 8 and 128"); //when the user does not input a value
     return null; //return back to the user
-  } //else if (userInput > 8 && userInput < 128) { //when the value is withinthe 8-128 range
-  //continuee????
+  } 
 
   // confirm whether or not to include lowercase
   conLowercase = confirm("Will this contain lowercase?");
@@ -155,7 +169,7 @@ function characterLengthPrompt() {
     return null;
   }
 
-
+//object to pull from the options of users above
   var passwordOptions = {
     userInput: userInput,
     conLowercase: conLowercase,
@@ -164,13 +178,7 @@ function characterLengthPrompt() {
     conSpecialCharacters: conSpecialCharacters
   }; 
   return passwordOptions;
-  //if the user chooses 3 types of criteria
-  // }  else if  (conLowercase && conUppercase && conNumerics) {
-  //     generate = conLowercase.concat(conUppercase && conNumerics);
-
-  // } else if { (conLowercase && conUppercase && conSpecialCharacters); {
-  //     generate = conLowercase.concat(conNumerics && conSpecialCharacters)
-  // }
+  
 }
 
 
