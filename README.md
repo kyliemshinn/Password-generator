@@ -1,5 +1,7 @@
 # Password-generator
 
+https://kyliemshinn.github.io/Password-generator/
+
 ## Description
 
 The purose of this project is to randomly and automatically generate a unique password when the generate password button is clicked. The browser will send an alert to generate a password once you have clicked the button. The user will then be prompted to confirm the amount of characters you desire- between 8-128. It will then bring you through a series of confirmations to see if you would like uppercase characters, lowercase letters, special characters, and numbers. You must confirm at least one to continue to generate a password. The password generated will automatically come up with the unqique password with the desired length and character types given after all the confirmations are done. Reference GIF below to see the functionality of the webpage.
